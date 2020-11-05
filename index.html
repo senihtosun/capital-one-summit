@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"></meta>
+    <title>Capital One Challenge</title>
+    <link rel="stylesheet" href="static/style.css">
+
+    <!-- materialize css link for style -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <nav class="light-blue lighten-1" role="navigation">
+        <ul class="right hide-on-med-and-down">
+            <li><a style='margin-right: 100px;' href="about.html">About</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="sidenav">
+            <li><a style='margin-left: 100px;' href="index.html">News API</a></li>
+        </ul>
+    </nav>
+    <br>
+    <!-- END NAVIGATION -->
+
+    <h4>Latest Sports, Technology, and Entertainment headlines</h4><br>
+
+    <!-- Dropdown Trigger Button -->
+    <a class='dropdown-button btn light-blue' href='#' data-activates='dropdown1'>Select Category</a>
+
+    <!-- Dropdown Menu 
+    Each option calls a javascript class accordingly
+    -->
+    <ul id='dropdown1' class='dropdown-content'>
+        <li><a onclick='return sports()' href="#">Sports</a></li>
+        <li><a onclick='return tech()' href="#">Technology</a></li>
+        <li><a onclick='return entertainment()' href="#">Entertainment</a></li>
+    </ul><br><br>
+    
+    <!-- DISPLAY NEWS -->   
+    <div class='container'>
+        <div class='row'>
+            <div id='newsList'></div>
+        </div>
+
+        <div id='loader'>
+            <!-- Progress class from materialize css to show 
+            loading bar if page loads slowly -->
+            <div class='progress'>
+                <div class='indeterminate'></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script src='static/app.js'></script>
+    
+</body>
+
+
+</html>
