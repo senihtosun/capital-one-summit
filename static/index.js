@@ -1,12 +1,7 @@
 // Function will run everytime page refreshes
 // Sports category is the default to display
-
-let test = 0;
-
 $(document).ready(function() {
   retrieveNews('sports')
-  test++
-  console.log(test)
 })
 
 // Sports function
@@ -27,9 +22,9 @@ function entertainment(){
 
 // Main Function to fetch and append the news to html div
 function retrieveNews(category){
-  const apiKey = '78b9d599c4f94f8fa3afb1a5458928d6'
+  const apiKey = 'put_your_api_key_here'
 
-  // Url to fetch the data by providing a category from the API
+  // Url to fetch the data by providing a category and the API Key
   let url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&pageSize=30&apiKey=${apiKey}`
 
   // Output variable to append all the news
@@ -52,6 +47,7 @@ function retrieveNews(category){
 
         // Concatenate everyting to the output variable
         // All the styling is done by materialize css cards
+        // If the source doesn't have an image display a default alt.jpg
         output += `
         <div class="col l4 m6 s12">
         <div class="card medium hoverable">
